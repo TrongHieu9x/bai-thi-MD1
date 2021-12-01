@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("nhập vào mảng bất kì")
+
+function SoNguyenAm(str) {
+    let soNguyenAm = ["a","o","e","u","i"]
+    let count = 0;
+
+    for (let i = 0; i < str.length; i++){
+        for (let j = 0; i < soNguyenAm.length; j++){
+            if (str[i].toLowerCase() === soNguyenAm[j]){
+                count++
+            }
+        }
+    }
+    if (count === 0) {
+        return false;
+    } else {
+    return count;
+}
+
+document.write("mảng có: " + SoNguyenAm(string) + "kí tự nguyên âm");
+</script>
+</body>
+</html>
